@@ -11,3 +11,5 @@ const findBy = filter => {
 const add = user => {
   return db("users").insert(user);
 };
+
+module.exports = { find, findBy, add };
