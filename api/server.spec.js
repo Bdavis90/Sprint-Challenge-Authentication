@@ -2,43 +2,6 @@ const server = require("./server");
 const request = require("supertest");
 const db = require("../database/dbConfig");
 
-// beforeEach(async () => {
-//   await db("users").truncate();
-// });
-
-// describe("Post to /register", () => {
-//   it("responds with 201 OK", () => {
-//     return request(server)
-//       .post("/api/auth/register")
-//       .send({ username: "b", password: "abc123" })
-//       .set("Content-Type", "application/json")
-//       .then(res => {
-//         expect(res.status).toBe(201);
-//       });
-//   });
-
-//   it("responds with 201", () => {
-//     return request(server)
-//       .post("/api/auth/register")
-//       .send({ username: "b", password: "abc123" })
-//       .set("Content-Type", "application/json")
-//       .then(res => {
-//         expect(res.body.username).toEqual("b");
-//       });
-//   });
-// });
-
-// describe("POST to /login", () => {
-//   it("responds with 200 Ok", () => {
-//     return request(server)
-//       .post("/api/auth/login")
-//       .send({ username: "bdavis", password: "abc123" })
-//       .then(res => {
-//         expect(res.body).toEqual({ username: "bdavis", password: "abc123" });
-//       });
-//   });
-// });
-
 describe("auth-router.js", () => {
   beforeEach(async () => {
     await db("users").truncate();
